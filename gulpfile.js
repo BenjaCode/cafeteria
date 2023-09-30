@@ -1,4 +1,4 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 function css(done){
@@ -15,3 +15,4 @@ function dev() {
 
 exports.css = css;
 exports.dev = dev;
+exports.default = series(css , dev);
