@@ -401,14 +401,6 @@ h3 {
   font-size: 3.2rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5E311E;
-}
-
 .header-inicio {
   background-image: url("../img/header_inicio.jpg");
 }
@@ -419,6 +411,10 @@ h3 {
 
 .header-proceso {
   background-image: url("../img/header_proceso.jpg");
+}
+
+.header-menu {
+  background-image: url("../img/header_menu.jpg");
 }
 
 .header {
@@ -790,4 +786,37 @@ h3 {
   width: 50%;
   height: 0.5rem;
   color: #C39C63;
+}
+
+.contenido-menu {
+  background-image: url("../img/cafe.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/5;
+}
+@media (min-width: 768px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
+.contenido-menu .texto p {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5E311E;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
