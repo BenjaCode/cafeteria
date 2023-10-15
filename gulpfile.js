@@ -1,11 +1,14 @@
 const {src, dest, watch, series, parallel} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require('gulp-sourcemaps');
 
 function css(done){
     src('src/scss/app.scss')
         /* .pipe(sass({outputStyle: 'compressed'})) */
-        .pipe(sass())
-            .pipe(dest('build/css'));
+        .pipe(sourcemaps.init())
+            .pipe(sass())
+                .pipe(sourcemaps.write('.'))
+                    .pipe(dest('build/css'));
     done();
 }
 

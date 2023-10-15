@@ -9,8 +9,10 @@
   "author": "BenjaCode",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^6.0.1",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.68.0"
   }
 }
